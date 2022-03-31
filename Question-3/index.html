@@ -1,0 +1,39 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <!-- Link to the index.css file
+        E.g. search for "how to link to css from html" -->
+    </head>
+    <body>
+        <h1>Question 3</h1>
+        <h2>Rewrite the getPayment function to avoid the deferred anti-pattern
+            <br>
+            <br>
+            <p>function getPayment(user) {
+                <br> 
+            &ensp; // …assume logic here to obtain bearer token and stored in variable ‘token’
+                <br>
+            &ensp; return new Promise(function(resolve, reject) {
+                <br>
+            &emsp;  getPaymentDetails(token).then(paymentDetails => {
+                <br>
+            &emsp; &emsp; resolve(paymentDetails);
+                <br>
+            &emsp; }).catch(error => {
+                <br>
+            &emsp; &emsp; reject(error);
+                <br>
+            &emsp; &emsp;});
+                <br>
+            &emsp;});
+                <br>
+            }
+            <br>
+            <br>
+            function getPaymentDetails(token) {
+            <br>
+            &ensp; …some async processing so this returns a promise that resolves once complete
+            </p>
+            }</h2>
+        <script src="index.js"></script>
+    </body>
+</html>
